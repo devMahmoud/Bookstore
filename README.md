@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Coming soon]()
 
 
 ## Getting Started
