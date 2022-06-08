@@ -1,14 +1,23 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import Book from '../Book/Book';
+import { removeBook } from '../../redux/books/books';
 
 const BookList = (props) => {
   const { books } = props;
+  const dispatch = useDispatch();
+
+  const removeBookHandeler = (id) => {
+    dispatch(removeBook(id));
+  };
+
   return (
     <ul>
       {
         books.map((book) => (
-          <li key={book.key}>
-            <Book title={book.title} author={book.author} />
+          <li key={books.indexOf(book)}>
+            <Book title={book.title} author={book.author} key={book.id} />
+            <button type="button" onClick={() => removeBookHandeler(book.id)}>Remove</button>
           </li>
         ))
       }
