@@ -6,16 +6,19 @@ const AddBookForm = () => {
   const [title, setTitle] = useState();
   const [author, setAuthor] = useState();
   const dispatch = useDispatch();
+
   const addBookHandeler = (event) => {
     event.preventDefault();
     if (!title || !author) return;
     const book = {
       title,
       author,
-      id: Math.floor(Math.random() * 10000).toString(),
+      item_id: Math.floor(Math.random() * 10000).toString(),
+      category: 'Fiction',
     };
     dispatch(addBook(book));
   };
+
   return (
     <div className="form-container">
       <h3>Add Book</h3>

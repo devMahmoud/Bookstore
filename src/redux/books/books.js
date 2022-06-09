@@ -4,14 +4,17 @@ const RETRIEVE_BOOKS = 'bookstore/books/RETRIEVE_BOOKS';
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initBooks = [{ title: 'book1', author: 'author1', id: '1' }, { title: 'book2', author: 'author2', id: '2' }];
-
 export const retrieveBooks = () => async (dispatch) => {
   try {
     const res = await BookDataService.getAll();
+    const { data } = res;
+    const books = Object.keys(data).map((key) => ({
+      id: key,
+      ...data[key][0],
+    }));
     dispatch({
       type: RETRIEVE_BOOKS,
-      books: res.data,
+      books,
     });
   } catch (err) {
     console.log(err);
@@ -23,7 +26,7 @@ export const addBook = (book) => async (dispatch) => {
     const res = await BookDataService.create(book);
     dispatch({
       type: ADD_BOOK,
-      book: res.data,
+      book,
     });
     return Promise.resolve(res.data);
   } catch (err) {
@@ -43,10 +46,10 @@ export const removeBook = (id) => async (dispatch) => {
   }
 };
 
-export default function booksReducer(state = initBooks, action = {}) {
+export default function booksReducer(state = [], action = {}) {
   switch (action.type) {
     case RETRIEVE_BOOKS:
-      return action.books;
+      return [...action.books];
     case ADD_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:
