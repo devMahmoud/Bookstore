@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
 
 const AddBookForm = () => {
@@ -13,7 +14,7 @@ const AddBookForm = () => {
     const book = {
       title,
       author,
-      item_id: Math.floor(Math.random() * 10000).toString(),
+      item_id: uuidv4(),
       category: 'Fiction',
     };
     dispatch(addBook(book));
