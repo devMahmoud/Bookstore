@@ -15,8 +15,8 @@ const BookList = (props) => {
       {
         books.map((book) => (
           <li key={books.indexOf(book)}>
-            <Book title={book.title} author={book.author} key={book.id} />
-            <button type="button" onClick={() => removeBookHandeler(book.id)}>Remove</button>
+            <Book title={book.title} author={book.author} key={book.item_id} />
+            <button type="button" onClick={() => removeBookHandeler(book.item_id)}>Remove</button>
           </li>
         ))
       }
