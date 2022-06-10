@@ -1,0 +1,22 @@
+.book-item {
+  list-style: none;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  margin: 2.313rem 6.25rem 0;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.book-item button {
+    font-family: 'RobotoSlab', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4386bf;
+    border: none;
+    border-right: 1px solid #e8e8e8;
+    background-color: #fff;
+}
