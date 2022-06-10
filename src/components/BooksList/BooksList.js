@@ -16,10 +16,16 @@ const BookList = (props) => {
       {
         books.map((book) => (
           <li className="book-item" key={books.indexOf(book)}>
-            <Book title={book.title} author={book.author} key={book.item_id} />
-            <button type="button">Comments</button>
-            <button type="button" onClick={() => removeBookHandeler(book.item_id)}>Remove</button>
-            <button type="button">Edit</button>
+            <Book
+              title={book.title}
+              author={book.author}
+              category={book.category}
+              key={book.item_id}
+              percent={Math.floor(Math.random() * 100)}
+            />
+            <button className="book-btn" type="button">Comments</button>
+            <button className="book-btn" type="button" onClick={() => removeBookHandeler(book.item_id)}>Remove</button>
+            <button className="book-btn" type="button">Edit</button>
           </li>
         ))
       }
