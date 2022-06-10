@@ -1,4 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  padding: 9.313rem 3.75rem 7.688rem 6.25rem;
+  padding: 6rem 2rem;
   background-color: #f5f6fa;
+}
+
+button:hover {
+  cursor: pointer;
 }

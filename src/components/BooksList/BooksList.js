@@ -24,7 +24,7 @@ const BookList = (props) => {
               percent={Math.floor(Math.random() * 100)}
             />
             <button className="book-btn" type="button">Comments</button>
-            <button className="book-btn" type="button" onClick={() => removeBookHandeler(book.item_id)}>Remove</button>
+            <button className="book-btn mid-btn" type="button" onClick={() => removeBookHandeler(book.item_id)}>Remove</button>
             <button className="book-btn" type="button">Edit</button>
           </li>
         ))

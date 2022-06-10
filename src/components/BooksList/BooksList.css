@@ -1,22 +1,27 @@
 .book-item {
   list-style: none;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
-  margin: 2.313rem 6.25rem 0;
+  padding: 1rem;
+  margin: 1rem 4rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
 
 .book-btn {
-    font-family: 'RobotoSlab', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #4386bf;
-    border: none;
-    border-right: 1px solid #e8e8e8;
-    background-color: #fff;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border: none;
+  background-color: #fff;
+  padding: 0 1rem;
+}
+
+.mid-btn {
+  border-right: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
 }

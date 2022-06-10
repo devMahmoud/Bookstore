@@ -1,0 +1,27 @@
+.form-container {
+  margin: 1rem 4rem;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 1rem;
+}
+
+.add-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.title-input {
+  padding: 0.5rem;
+  width: 60%;
+}
+
+.author-input {
+  padding: 0.5rem;
+}
+
+.add-btn {
+  padding: 0.5rem;
+  background-color: #4290fe;
+  color: #fff;
+  border: none;
+}

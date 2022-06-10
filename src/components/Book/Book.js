@@ -32,21 +32,22 @@ const Book = (props) => {
           percent={percent}
           size={80}
         />
-        <span>
+        <div>
           {percent}
           %
-        </span>
+          <br />
+          Completed
+        </div>
       </div>
       <div className="chapter-info">
-        <p>
-          <span className="current-chapter">
+        <div>
+          <p className="current-chapter">
             CURRENT CHAPTER
-          </span>
-          <br />
-          <span className="chapter-num">
+          </p>
+          <p className="chapter-num">
             Chapter 17
-          </span>
-        </p>
+          </p>
+        </div>
         <button type="button" className="update-btn">UPDATE PROGRESS</button>
       </div>
     </div>
