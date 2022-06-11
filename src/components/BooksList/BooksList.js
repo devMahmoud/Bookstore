@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import Book from '../Book/Book';
 import { removeBook } from '../../redux/books/books';
+import './BooksList.css';
 
 const BookList = (props) => {
   const { books } = props;
@@ -14,9 +15,17 @@ const BookList = (props) => {
     <ul>
       {
         books.map((book) => (
-          <li key={books.indexOf(book)}>
-            <Book title={book.title} author={book.author} key={book.item_id} />
-            <button type="button" onClick={() => removeBookHandeler(book.item_id)}>Remove</button>
+          <li className="book-item" key={books.indexOf(book)}>
+            <Book
+              title={book.title}
+              author={book.author}
+              category={book.category}
+              key={book.item_id}
+              percent={Math.floor(Math.random() * 100)}
+            />
+            <button className="book-btn" type="button">Comments</button>
+            <button className="book-btn mid-btn" type="button" onClick={() => removeBookHandeler(book.item_id)}>Remove</button>
+            <button className="book-btn" type="button">Edit</button>
           </li>
         ))
       }
