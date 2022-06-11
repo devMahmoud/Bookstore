@@ -51,6 +51,16 @@
   margin-right: 1rem;
 }
 
+.percent-text {
+  font-size: larger;
+  margin-left: 0.5rem;
+}
+
+.chapter-info {
+  padding-left: 2rem;
+  border-left: 1px solid #c5c1c1;
+}
+
 .current-chapter {
   color: #121212;
   opacity: 0.5;
@@ -64,5 +74,5 @@
   background-color: #4290fe;
   color: #fff;
   border: none;
-  padding: 0.25rem;
+  padding: 8px 16px;
 }

@@ -32,7 +32,7 @@ const Book = (props) => {
           percent={percent}
           size={80}
         />
-        <div>
+        <div className="percent-text">
           {percent}
           %
           <br />

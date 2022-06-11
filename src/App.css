@@ -4,7 +4,7 @@
 }
 
 .App {
-  padding: 6rem 2rem;
+  min-height: 100vh;
   background-color: #f5f6fa;
 }
 
